@@ -1,4 +1,4 @@
-<!-- # Github seach
+# Github seach
 
 [githubsearch](https://github.com/REAGAN2020/github-finder)
 
@@ -62,4 +62,4 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## License
 
-[MIT](LICENSE.md) © @OwitiReagan -->
+[MIT](LICENSE.md) © @OwitiReagan
