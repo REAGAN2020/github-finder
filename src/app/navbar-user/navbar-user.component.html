@@ -1,0 +1,74 @@
+<link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+<div class="container-fluid p-0 m-0">
+    <app-navbar></app-navbar>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 pt-4">
+                <app-search (searchEmitter)="getUsers($event)"></app-search>
+            </div>
+            <div class="col-md-12 pt-3">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{ user.avatar_url }}">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <p class="username"><i class="fa fa-user-circle pt-4"
+                                        style="font-size:18px; font-weight: bold;"></i> {{ user.login }}</p>
+                            </div>
+                            <div class="col-md-8 mt-3">
+                                <a class="btn btn-info btn-sm" href="{{user.html_url}}" target="_blank"> <img
+                                        src="https://img.icons8.com/ios-glyphs/20/000000/github.png" /> View Profile on
+                                    github</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 pt-5">
+                        <!-- <div id="profile">
+                            <h2>Personal Profile</h2>
+                            <hr>
+                            <p><i class="fa fa-file" style="font-size:18px"></i>&nbsp;&nbsp; Repositories:&nbsp;&nbsp;
+                                <span class="follow">{{user.public_repos}}</span></p>
+                            <hr>
+                            <p> <i class="fa fa-user-circle" style="font-size:18px"></i>&nbsp;&nbsp;
+                                Following:&nbsp;&nbsp; <span class="follow">{{user.following}}</span></p>
+                            <hr>
+                            <p> <i class="fa fa-users" style="font-size:18px"></i>&nbsp;&nbsp; Followers:&nbsp;&nbsp;
+                                <span class="follow">{{user.followers}}</span></p>
+                            <hr>
+                            <p><i class="fa fa-clock" style="font-size:18px"></i>&nbsp;&nbsp; Created:&nbsp;&nbsp; <span
+                                    class="datejoined">{{user.created_at}}</span></p>
+                            <hr>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid">
+        <h2 class="text-center pt-3 pb-2">Repositories</h2>
+        <div class="row">
+            <div class="col-md-4" *ngFor="let repos of repo">
+                <div class="card-deck">
+                    <div class="cards">
+                        <div id="repo" class="card mt-2"  style="width: 30rem;">
+                            <div class="card-header">
+                                <h3 class="card-title">{{repos.name}}</h3>
+                            </div>
+                            <div class="card-body">
+                                <p> {{ repos.description}} </p>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-info">Forks {{repos.forks_count}} </button>
+                                <a target="_blank" href="{{repos.html_url}}"><button class="btn btn-info ml-1">Visit
+                                        this project on Github</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
