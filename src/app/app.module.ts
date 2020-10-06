@@ -8,13 +8,15 @@ import { FormsModule } from '@angular/forms';
 import { NavbarUserComponent } from './navbar-user/navbar-user.component';
 import { SearchComponent } from './search/search.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarUserComponent,
     SearchComponent,
-    NavbarComponent
+    NavbarComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
